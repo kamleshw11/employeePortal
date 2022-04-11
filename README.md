@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Steps
+
+1. ng new employeePortal  
+2. cd employeePortal
+3. npm install bootstrap@latest , import bootstrap in styles.css @import '~bootstrap/dist/css/bootstrap.css'
+4. ng serve --open
+
+* generate new components
+
+5. open new terminal inside employeePortal
+6. ng g c components/header | ng g c components/footer | ng g c components/main  | ng g c components/employeeDetails
+7. emptied app.compoenent.html and added the component elements header , footer, and main in it
+8. added employee-details element in main.component.html
+
+* creating and importing user defined interface
+
+9. create utility folder in components add Employee Interface with properties such as empId etc
+10. import employee in amployee-details.component.ts and create array of Employee
+
+* accessing employee in html 
+
+11. check if array is empty or not using ngIf="employees.length!=0"
+12. display employee using *ngFor="let employee of employees"
+
+* Toggle details using event handler (click)="toggle(employee)" on condition *ngIf="employee.flag"
+13. define method toggle(employee:Employee){employee.flag=!employee.flag} inside employee-details.component.ts
